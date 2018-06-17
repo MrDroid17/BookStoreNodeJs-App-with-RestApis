@@ -1,0 +1,28 @@
+{
+  "name": "bookstorenodejsappwithrestapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "body-parser": "^1.18.3",
+    "mongoose": "5.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDroid17/BookStoreNodeJs-App-with-RestApis.git"
+  },
+  "author": "Sobhit Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrDroid17/BookStoreNodeJs-App-with-RestApis/issues"
+  },
+  "homepage": "https://github.com/MrDroid17/BookStoreNodeJs-App-with-RestApis#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}
