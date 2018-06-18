@@ -47,6 +47,18 @@ app.put('/api/genres/:_id', (req, res)=>{
   })
 })
 
+/**
+ * delete request for removing genre
+ * end point could be same as long as you make different request
+ */
+app.delete('/api/genres/:_id', (req, res)=>{
+  var id = req.params._id
+  Genre.deleteGenre(id,(err, genre)=>{
+    if(err) throw err
+    res.json(genre)
+  })
+})
+
 app.get('/api/books/', (req, res)=>{
   Book.getBooks((err, books)=>{
     if(err) throw err
@@ -90,6 +102,19 @@ app.put('/api/books/:_id', (req, res)=>{
     res.json(book)
   })
 })
+
+/**
+ * delete request for removing book
+ * end point could be same as long as you make different request
+ */
+app.delete('/api/books/:_id', (req, res)=>{
+  var id = req.params._id
+  Book.deleteBook(id,(err, book)=>{
+    if(err) throw err
+    res.json(book)
+  })
+})
+
 
 app.listen(3000)
 console.log('running on port 3000')
