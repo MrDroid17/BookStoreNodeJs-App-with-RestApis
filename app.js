@@ -34,6 +34,19 @@ app.post('/api/genres/', (req, res)=>{
   })
 })
 
+/**
+ * put request for updating genre
+ * end point could be same as long as you make different request
+ */
+app.put('/api/genres/:_id', (req, res)=>{
+  var id = req.params._id
+  var genre = req.body
+  Genre.updateGenre(id, genre,{},(err, genre)=>{
+    if(err) throw err
+    res.json(genre)
+  })
+})
+
 app.get('/api/books/', (req, res)=>{
   Book.getBooks((err, books)=>{
     if(err) throw err
@@ -60,6 +73,19 @@ app.post('/api/books/', (req, res)=>{
    */
   var book = req.body
   Book.addBook(book,(err, book)=>{
+    if(err) throw err
+    res.json(book)
+  })
+})
+
+/**
+ * put request for updating book
+ * end point could be same as long as you make different request
+ */
+app.put('/api/books/:_id', (req, res)=>{
+  var id = req.params._id
+  var book = req.body
+  Book.updateBook(id, book,{},(err, book)=>{
     if(err) throw err
     res.json(book)
   })
